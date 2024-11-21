@@ -3,32 +3,35 @@
 #include <iostream>
 #include <string>
 #include "author.cpp"
-
+#include "chapter.cpp"
 class Article{
 private:
     std:: string title;
     Author author;
     int publicationYear;
-    std:: string jurnal;
+    std:: string journal;
 public:
     Article()
-    :title(""), Author(author()), publicationYear(0),jurnal(jurnal)();
-    Article(std::string articleTitle, Author articleauthor,int publicationYear,std:: string jurnalName)
-    :title(articleTitle), author(articleAuthor),publicationYear (articlePublicationYear), jurnal (articleJUrnal)
-    Article(Article,&other)
-    :title (other.Title), other (other.Author), other (other.PublicationYear), other (other.Jurnal)
+    :title(""), author(Author()), publicationYear(0),journal(""){};
+    Article(std::string articleTitle, Author articleAuthor,int articlePublicationYear,std:: string journal)
+    :title(articleTitle), author(articleAuthor),publicationYear (articlePublicationYear), journal (journal){};
+    Article(Article &other)
+    :title (other.title), author (other.author), publicationYear (other.publicationYear), journal (other.journal){};
 
 int getPublicationYear(){
-    return publicationYear
-}
+    return publicationYear;
+};
 std::string getTitle(){
     return title;
-}
-std::string getAuthor(){
+};
+Author getAuthor(){
     return author;
-}
+};
+std::string getJournal(){
+    return journal;
+};
 void displayInfo(){
     std::cout<<"skibidi mostek";
-}
-}   
+};
+}   ;
 #endif

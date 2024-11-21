@@ -1,5 +1,5 @@
 #ifndef ARTICLE_H
-#define Articel_H
+#define ARTICLE_H 
 #include <iostream>
 #include <string>
 class  Author{
