@@ -1,5 +1,5 @@
-#ifndef UNTITLED1_ARTICLE_H
-#define UNTITLED1_ARTICLE_H
+#ifndef CHAPTER
+#define CHAPTER
 #include <iostream>
 #include <string>
 #include "author.cpp"
@@ -10,18 +10,16 @@ private:
     Author author;
     int chapterNumber;
 public:
-    Chapter ()
-    :title(""), author(Author()), chapterNumber (0){};
+    Chapter()
+    :title(""), author(Author()), chapterNumber(1){};
     
     Chapter(std::string chapterTitle,Author chapterAuthor, int number)
     :title(chapterTitle), author(chapterAuthor), chapterNumber(number){};
    
-    Chapter(Chapter &other)
-    :title (other.title), author(other.author), chapterNumber (other.chapterNumber){};
+    Chapter(Chapter &other):title(other.title), author(other.author), chapterNumber(other.chapterNumber){};
 
-    Chapter (Article &article)
-    :title (article.getTitle()), author (article.getAuthor()), chapterNumber (1){};
-    std:: string getTitle(){
+    Chapter(Article &article):title(article.getTitle()), author(article.getAuthor()), chapterNumber(1){};
+    std::string getTitle(){
         return title;
     }
     Author getAuthor(){
@@ -31,7 +29,7 @@ public:
         return chapterNumber;
     }
     void displayInfo (){
-    std::cout<<"Chapter "<<chapterNumber<<"; "<<title<<" by " << author.getName() <<" "<<author.getSurname();
+    std::cout<<"Chapter "<<chapterNumber<<": "<<title<<" by " << author.getName() <<" "<<author.getSurname() <<std::endl;
     };
 } ;
 #endif

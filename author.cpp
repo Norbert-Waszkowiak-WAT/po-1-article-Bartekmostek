@@ -1,7 +1,8 @@
-#ifndef ARTICLE_H
-#define ARTICLE_H 
+#ifndef AUTHOR
+#define AUTHOR 
 #include <iostream>
 #include <string>
+
 class  Author{
 private:
     std :: string name;

@@ -1,9 +1,9 @@
-#ifndef UNTITLED1_AUTHOR_H
-#define UNTITLED1_AUTHOR_H
+#ifndef ARTICLE
+#define ARTICLE
 #include <iostream>
 #include <string>
 #include "author.cpp"
-#include "chapter.cpp"
+
 class Article{
 private:
     std:: string title;
@@ -13,7 +13,7 @@ private:
 public:
     Article()
     :title(""), author(Author()), publicationYear(0),journal(""){};
-    Article(std::string articleTitle, Author articleAuthor,int articlePublicationYear,std:: string journal)
+    Article(std::string articleTitle, Author articleAuthor, int articlePublicationYear, std::string journal)
     :title(articleTitle), author(articleAuthor),publicationYear (articlePublicationYear), journal (journal){};
     Article(Article &other)
     :title (other.title), author (other.author), publicationYear (other.publicationYear), journal (other.journal){};
