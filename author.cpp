@@ -2,28 +2,28 @@
 #define AUTHOR 
 #include <iostream>
 #include <string>
-
+using namespace std;
 class  Author{
 private:
-    std :: string name;
-    std :: string surname;
+    string name;
+    string surname;
 public:
     Author():
     name(""), surname (""){};
-    Author (std :: string name, std :: string surname): 
+    Author (string name, string surname): 
     name (name), surname (surname){};
     
-   std:: string getName() {
+    string getName() {
         return name;
    }
-  std :: string getSurname() {
+    string getSurname() {
         return surname;
    } 
-    std :: string toString () {
+    string toString () {
         return name+" "+ surname;
     }
     void print () {
-        std :: cout <<name <<" "<< surname<< std :: endl; 
+        cout <<name <<" "<< surname<< endl; 
     }
 };
 #endif
